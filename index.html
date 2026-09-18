@@ -333,8 +333,8 @@
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-md);
       border: 1px solid var(--border-color);
-      padding: 32px;
-      margin-top: 24px;
+      padding: 20px 26px;
+      margin-top: 14px;
       transition: var(--transition-smooth);
     }
 
@@ -344,9 +344,9 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1.5px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 24px;
-      gap: 20px;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -447,7 +447,7 @@
       background-color: var(--bg-body);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 18px 22px;
       transition: var(--transition-smooth);
     }
 
@@ -909,179 +909,149 @@
       }
     }
 
-    /* Refleksi LK 2 Banner (Sub-tab Refleksi 4C) */
-    .refleksi-lk-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 10px 18px;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 50%, #eff6ff 100%);
+    /* Refleksi LK 2 Unified Mini-Widget (Sub-tab Refleksi 4C) */
+    .refleksi-lk-widget {
+      background: var(--bg-card);
       border: 1px solid #bfdbfe;
       border-left: 4px solid #2563eb;
       border-radius: var(--radius-sm);
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
-      position: relative;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+      transition: var(--transition-smooth);
     }
 
-    .refleksi-lk-banner-left {
+    [data-theme="dark"] .refleksi-lk-widget {
+      background: #0f1e36;
+      border-color: #1e3a8a;
+      border-left: 4px solid #60a5fa;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .refleksi-lk-widget-header {
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      padding: 5px 12px;
+      background: linear-gradient(90deg, #f0f7ff 0%, #e0f2fe 50%, #eff6ff 100%);
+      border-bottom: 1px solid #bfdbfe;
+      gap: 10px;
     }
 
-    .refleksi-lk-banner-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
+    [data-theme="dark"] .refleksi-lk-widget-header {
+      background: linear-gradient(90deg, #0f1e36 0%, #172554 100%);
+      border-bottom-color: #1e3a8a;
+    }
+
+    .refleksi-lk-widget-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .refleksi-lk-widget-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
       background: #2563eb;
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
     }
 
-    .refleksi-lk-badges {
+    .refleksi-lk-widget-info {
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 2px;
+      gap: 7px;
+      overflow: hidden;
+      min-width: 0;
       flex-wrap: wrap;
     }
 
     .refleksi-lk-tag {
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       color: #1e40af;
       text-transform: uppercase;
       background-color: #dbeafe;
-      padding: 2px 8px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .refleksi-live-badge {
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: #047857;
-      background-color: #d1fae5;
       padding: 2px 7px;
       border-radius: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 3px;
+      flex-shrink: 0;
     }
 
-    .refleksi-lk-banner h5 {
-      font-size: 0.9rem;
+    [data-theme="dark"] .refleksi-lk-tag {
+      background-color: #1e3a8a;
+      color: #bfdbfe;
+    }
+
+    .refleksi-live-badge {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: #047857;
+      background-color: #d1fae5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    [data-theme="dark"] .refleksi-live-badge {
+      background-color: #064e3b;
+      color: #a7f3d0;
+    }
+
+    .refleksi-lk-widget-title {
+      font-size: 0.78rem;
       font-family: var(--font-sans);
       font-weight: 700;
       color: var(--text-main);
-      margin: 0 0 2px;
-    }
-
-    .refleksi-lk-banner p {
-      font-size: 0.76rem;
-      color: var(--text-muted);
       margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .refleksi-lk-banner-right {
+    .refleksi-lk-widget-actions {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       flex-shrink: 0;
-      flex-wrap: wrap;
     }
 
     .btn-refleksi-toggle {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      padding: 6px 12px;
-      font-size: 0.75rem;
+      gap: 4px;
+      padding: 4px 10px;
+      font-size: 0.72rem;
       font-weight: 600;
-      border-radius: 20px;
+      border-radius: 16px;
       border: 1px solid #93c5fd;
       background-color: #eff6ff;
       color: #1d4ed8;
       cursor: pointer;
-      transition: var(--transition-smooth);
+      transition: var(--transition-fast);
     }
 
     .btn-refleksi-toggle:hover {
       background-color: #2563eb;
       color: #ffffff;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
-    }
-
-    .btn-refleksi-preview {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 6px 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
-      background-color: var(--bg-card);
-      color: var(--text-main);
-      cursor: pointer;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-refleksi-preview:hover {
-      background-color: var(--accent-blue-light);
-      color: var(--accent-blue);
-      border-color: var(--accent-blue);
-    }
-
-    .btn-refleksi-open {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 6px 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 20px;
-      border: 1px solid #1d4ed8;
-      background-color: #1d4ed8;
-      color: #ffffff;
-      text-decoration: none;
-      transition: var(--transition-smooth);
-    }
-
-    .btn-refleksi-open:hover {
-      background-color: #1e40af;
-      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
-    }
-
-    [data-theme="dark"] .refleksi-lk-banner {
-      background: linear-gradient(135deg, #0f1e36 0%, #1e293b 100%);
-      border-color: #1e40af;
-      border-left: 4px solid #60a5fa;
-    }
-
-    [data-theme="dark"] .refleksi-lk-tag {
-      background-color: rgba(37, 99, 235, 0.25);
-      color: #93c5fd;
-    }
-
-    [data-theme="dark"] .refleksi-live-badge {
-      background-color: rgba(6, 95, 70, 0.3);
-      color: #6ee7b7;
     }
 
     [data-theme="dark"] .btn-refleksi-toggle {
-      background-color: rgba(37, 99, 235, 0.2);
-      border-color: #60a5fa;
-      color: #bfdbfe;
+      background-color: #1e293b;
+      border-color: #3b82f6;
+      color: #93c5fd;
     }
 
     [data-theme="dark"] .btn-refleksi-toggle:hover {
@@ -1089,107 +1059,56 @@
       color: #ffffff;
     }
 
-    /* Compact Mini Preview Card (Cuplikan Kecil) */
-    .inline-preview-card {
-      background: var(--bg-card);
-      border: 1px solid #bfdbfe;
-      border-radius: var(--radius-sm);
-      margin: 0 auto 16px;
-      max-width: 580px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.06);
-      transition: var(--transition-smooth);
-    }
-
-    .inline-preview-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px 12px;
-      background: linear-gradient(90deg, #f8fafc 0%, #eff6ff 100%);
-      border-bottom: 1px solid var(--border-color);
-      gap: 8px;
-    }
-
-    [data-theme="dark"] .inline-preview-card {
-      border-color: #1e3a8a;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    [data-theme="dark"] .inline-preview-header {
-      background: linear-gradient(90deg, #1e293b 0%, #0f1e36 100%);
-    }
-
-    .inline-preview-header-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      overflow: hidden;
-    }
-
-    .inline-preview-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      background: #2563eb;
-      color: #ffffff;
-      padding: 2px 6px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      flex-shrink: 0;
-    }
-
-    .inline-preview-subtitle {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-main);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 240px;
-    }
-
-    .inline-preview-header-actions {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-
-    .btn-inline-action {
+    .btn-refleksi-preview {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 3px 8px;
-      font-size: 0.7rem;
+      padding: 4px 10px;
+      font-size: 0.72rem;
       font-weight: 600;
-      border-radius: 4px;
+      border-radius: 16px;
       border: 1px solid var(--border-color);
-      background: var(--bg-card);
+      background-color: var(--bg-card);
       color: var(--text-main);
-      text-decoration: none;
       cursor: pointer;
-      transition: var(--transition-smooth);
+      transition: var(--transition-fast);
     }
 
-    .btn-inline-action:hover {
-      background: var(--accent-blue-light);
-      color: var(--accent-blue);
-      border-color: var(--accent-blue);
+    .btn-refleksi-preview:hover {
+      background-color: var(--bg-subnav);
+      color: var(--text-light);
+    }
+
+    .btn-refleksi-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: 16px;
+      border: 1px solid #1d4ed8;
+      background-color: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .btn-refleksi-open:hover {
+      background-color: #1e40af;
     }
 
     .inline-preview-body {
       position: relative;
       width: 100%;
-      height: 190px;
+      height: 85px;
       background: #f1f5f9;
+      transition: var(--transition-smooth);
     }
 
     [data-theme="dark"] .inline-preview-body {
-      background: #0f172a;
+      background: #020617;
     }
 
     .inline-preview-body iframe {
@@ -2453,52 +2372,32 @@
         
         <!-- Sub-Tab 1: Refleksi 4C -->
         <div id="pane-refleksi-4c" class="tab-pane active-pane">
-          <!-- Banner Dokumen LK 2 -->
-          <div class="refleksi-lk-banner" id="refleksi-lk-banner">
-            <div class="refleksi-lk-banner-left">
-              <div class="refleksi-lk-banner-icon"><i data-lucide="file-check-2" style="width: 22px; height: 22px;"></i></div>
-              <div>
-                <div class="refleksi-lk-badges">
-                  <span class="refleksi-lk-tag">✨ Dokumen Autentik LK 2</span>
-                  <span class="refleksi-live-badge"><span class="pulse-dot" style="width: 6px; height: 6px;"></span> PDF Google Drive</span>
+          <!-- Dokumen Autentik LK 2: Mini Widget Terpadu -->
+          <div class="refleksi-lk-widget" id="refleksi-lk-widget">
+            <div class="refleksi-lk-widget-header">
+              <div class="refleksi-lk-widget-left">
+                <div class="refleksi-lk-widget-icon">
+                  <i data-lucide="file-check-2" style="width: 14px; height: 14px;"></i>
                 </div>
-                <h5 id="banner-lk-title">Lembar Kerja Refleksi Pengalaman Belajar (PDF)</h5>
-                <p>Naskah autentik Lembar Kerja 2 tersimpan di Google Drive dan dapat ditinjau langsung di bawah atau layar penuh.</p>
+                <div class="refleksi-lk-widget-info">
+                  <span class="refleksi-lk-tag">✨ Dokumen LK 2</span>
+                  <span class="refleksi-live-badge"><span class="pulse-dot" style="width: 5px; height: 5px;"></span> Drive</span>
+                  <span class="refleksi-lk-widget-title" id="banner-lk-title">Lembar Kerja Refleksi Pengalaman Belajar (PDF)</span>
+                </div>
               </div>
-            </div>
-            <div class="refleksi-lk-banner-right">
-              <button class="btn-refleksi-toggle" id="btn-banner-toggle-inline" onclick="toggleInlinePreview()">
-                <i data-lucide="eye-off" id="toggle-inline-icon" style="width: 13px; height: 13px;"></i> <span id="toggle-inline-text">Sembunyikan Cuplikan</span>
-              </button>
-              <button class="btn-refleksi-preview" id="btn-banner-preview">
-                <i data-lucide="maximize-2" style="width: 13px; height: 13px;"></i> Layar Penuh
-              </button>
-              <a href="#" target="_blank" class="btn-refleksi-open" id="btn-banner-open">
-                <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Buka Drive
-              </a>
-            </div>
-          </div>
-
-          <!-- Inline Document Preview Card -->
-          <div class="inline-preview-card" id="inline-preview-card">
-            <div class="inline-preview-header">
-              <div class="inline-preview-header-left">
-                <span class="inline-preview-badge">Cuplikan Mini</span>
-                <span class="inline-preview-subtitle" id="inline-preview-filename">Memuat naskah autentik Google Drive...</span>
-              </div>
-              <div class="inline-preview-header-actions">
-                <button class="btn-inline-action" id="btn-inline-fullscreen" title="Perbesar Layar Penuh">
+              <div class="refleksi-lk-widget-actions">
+                <button class="btn-refleksi-toggle" id="btn-banner-toggle-inline" onclick="toggleInlinePreview()" title="Tampilkan atau Sembunyikan Cuplikan">
+                  <i data-lucide="eye-off" id="toggle-inline-icon" style="width: 12px; height: 12px;"></i> <span id="toggle-inline-text">Sembunyikan Cuplikan</span>
+                </button>
+                <button class="btn-refleksi-preview" id="btn-banner-preview" title="Buka Dokumen Layar Penuh">
                   <i data-lucide="maximize-2" style="width: 12px; height: 12px;"></i> Layar Penuh
                 </button>
-                <a href="#" target="_blank" class="btn-inline-action" id="btn-inline-external" title="Buka di Tab Baru Google Drive">
-                  <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Drive
+                <a href="#" target="_blank" class="btn-refleksi-open" id="btn-banner-open" title="Buka Dokumen di Google Drive">
+                  <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Buka Drive
                 </a>
-                <button class="btn-inline-action" onclick="toggleInlinePreview()" title="Tutup Cuplikan">
-                  <i data-lucide="x" style="width: 12px; height: 12px;"></i> Tutup
-                </button>
               </div>
             </div>
-            <div class="inline-preview-body">
+            <div class="inline-preview-body" id="inline-preview-body">
               <iframe id="inline-preview-iframe" src="" frameborder="0" allow="autoplay" title="Pratinjau Dokumen LK 2"></iframe>
             </div>
           </div>
@@ -3110,17 +3009,17 @@
     // TOGGLE INLINE PDF PREVIEW
     // ==========================================
     function toggleInlinePreview() {
-      const card = document.getElementById('inline-preview-card');
+      const body = document.getElementById('inline-preview-body');
       const text = document.getElementById('toggle-inline-text');
       const icon = document.getElementById('toggle-inline-icon');
-      if (!card) return;
+      if (!body) return;
 
-      if (card.style.display === 'none') {
-        card.style.display = 'block';
+      if (body.style.display === 'none') {
+        body.style.display = 'block';
         if (text) text.textContent = 'Sembunyikan Cuplikan';
         if (icon) icon.setAttribute('data-lucide', 'eye-off');
       } else {
-        card.style.display = 'none';
+        body.style.display = 'none';
         if (text) text.textContent = 'Buka Cuplikan';
         if (icon) icon.setAttribute('data-lucide', 'eye');
       }
@@ -3151,10 +3050,10 @@
         };
       }
 
-      // Banner Dokumen LK 2 (Refleksi 4C Sub-tab)
+      // Widget Dokumen LK 2 (Refleksi 4C Sub-tab)
       const bannerTitle = document.getElementById('banner-lk-title');
       if (bannerTitle) {
-        bannerTitle.textContent = `LK 2 – Refleksi Pengalaman Belajar: ${data.title} (PDF)`;
+        bannerTitle.textContent = `LK 2 (PDF): ${data.title}`;
       }
       const btnBannerPreview = document.getElementById('btn-banner-preview');
       if (btnBannerPreview) {
@@ -3168,24 +3067,8 @@
       }
 
       // Inline Document Preview (Sub-tab Refleksi 4C)
-      const inlineCard = document.getElementById('inline-preview-card');
       const inlineIframe = document.getElementById('inline-preview-iframe');
-      const inlineSubtitle = document.getElementById('inline-preview-filename');
-      const btnInlineExternal = document.getElementById('btn-inline-external');
-      const btnInlineFullscreen = document.getElementById('btn-inline-fullscreen');
-
       const lkDriveId = extractDriveId(data.refleksiLk);
-      if (inlineSubtitle) {
-        inlineSubtitle.textContent = `LK 2 – Refleksi Pengalaman Belajar: ${data.title} (PDF)`;
-      }
-      if (btnInlineExternal) {
-        btnInlineExternal.setAttribute('href', data.refleksiLk || '#');
-      }
-      if (btnInlineFullscreen) {
-        btnInlineFullscreen.onclick = () => {
-          openModal(`LK 2 – Refleksi Pengalaman Belajar: ${data.title} (PDF)`, data.refleksiLk, 'Dokumen Autentik LK 2 (PDF Drive)');
-        };
-      }
       if (inlineIframe && lkDriveId) {
         inlineIframe.src = `https://drive.google.com/file/d/${lkDriveId}/preview`;
       }
