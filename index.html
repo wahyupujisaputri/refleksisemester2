@@ -669,12 +669,14 @@
       box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
     }
 
+    .dark-mode .doc-btn-open,
     [data-theme="dark"] .doc-btn-open {
       background-color: rgba(30, 58, 138, 0.4);
       border-color: rgba(59, 130, 246, 0.4);
       color: #93c5fd;
     }
 
+    .dark-mode .doc-btn-open:hover,
     [data-theme="dark"] .doc-btn-open:hover {
       background-color: #2563eb;
       color: #ffffff;
@@ -705,12 +707,14 @@
       box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
     }
 
+    .dark-mode .artefak-inline-badge,
     [data-theme="dark"] .artefak-inline-badge {
       color: #93c5fd;
       background-color: rgba(30, 58, 138, 0.35);
       border-color: rgba(59, 130, 246, 0.4);
     }
 
+    .dark-mode .artefak-inline-badge:hover,
     [data-theme="dark"] .artefak-inline-badge:hover {
       background-color: #2563eb;
       color: #ffffff;
@@ -877,6 +881,7 @@
       box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
     }
 
+    .dark-mode .btn-refleksi-lk,
     [data-theme="dark"] .btn-refleksi-lk {
       color: #ffffff;
       background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
@@ -921,6 +926,7 @@
       transition: var(--transition-smooth);
     }
 
+    .dark-mode .refleksi-lk-widget,
     [data-theme="dark"] .refleksi-lk-widget {
       background: #0f1e36;
       border-color: #1e3a8a;
@@ -932,12 +938,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 5px 12px;
-      background: linear-gradient(90deg, #f0f7ff 0%, #e0f2fe 50%, #eff6ff 100%);
+      padding: 6px 14px;
+      background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
       border-bottom: 1px solid #bfdbfe;
       gap: 10px;
     }
 
+    .dark-mode .refleksi-lk-widget-header,
     [data-theme="dark"] .refleksi-lk-widget-header {
       background: linear-gradient(90deg, #0f1e36 0%, #172554 100%);
       border-bottom-color: #1e3a8a;
@@ -966,7 +973,7 @@
     .refleksi-lk-widget-info {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
       overflow: hidden;
       min-width: 0;
       flex-wrap: wrap;
@@ -978,7 +985,7 @@
       letter-spacing: 0.04em;
       color: #1e40af;
       text-transform: uppercase;
-      background-color: #dbeafe;
+      background-color: #bfdbfe;
       padding: 2px 7px;
       border-radius: 4px;
       display: inline-flex;
@@ -987,6 +994,7 @@
       flex-shrink: 0;
     }
 
+    .dark-mode .refleksi-lk-tag,
     [data-theme="dark"] .refleksi-lk-tag {
       background-color: #1e3a8a;
       color: #bfdbfe;
@@ -1005,26 +1013,32 @@
       flex-shrink: 0;
     }
 
+    .dark-mode .refleksi-live-badge,
     [data-theme="dark"] .refleksi-live-badge {
       background-color: #064e3b;
       color: #a7f3d0;
     }
 
     .refleksi-lk-widget-title {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-family: var(--font-sans);
       font-weight: 700;
-      color: var(--text-main);
+      color: #1e40af !important; /* Bold high-contrast navy in light mode */
       margin: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
+    .dark-mode .refleksi-lk-widget-title,
+    [data-theme="dark"] .refleksi-lk-widget-title {
+      color: #93c5fd !important; /* Soft bright blue in dark mode */
+    }
+
     .refleksi-lk-widget-actions {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       flex-shrink: 0;
     }
 
@@ -1037,7 +1051,7 @@
       font-weight: 600;
       border-radius: 16px;
       border: 1px solid #93c5fd;
-      background-color: #eff6ff;
+      background-color: #ffffff;
       color: #1d4ed8;
       cursor: pointer;
       transition: var(--transition-fast);
@@ -1048,12 +1062,14 @@
       color: #ffffff;
     }
 
+    .dark-mode .btn-refleksi-toggle,
     [data-theme="dark"] .btn-refleksi-toggle {
       background-color: #1e293b;
       border-color: #3b82f6;
       color: #93c5fd;
     }
 
+    .dark-mode .btn-refleksi-toggle:hover,
     [data-theme="dark"] .btn-refleksi-toggle:hover {
       background-color: #2563eb;
       color: #ffffff;
@@ -1068,15 +1084,28 @@
       font-weight: 600;
       border-radius: 16px;
       border: 1px solid var(--border-color);
-      background-color: var(--bg-card);
-      color: var(--text-main);
+      background-color: #ffffff;
+      color: #1e293b;
       cursor: pointer;
       transition: var(--transition-fast);
     }
 
     .btn-refleksi-preview:hover {
-      background-color: var(--bg-subnav);
-      color: var(--text-light);
+      background-color: #f1f5f9;
+      color: #1e3a8a;
+    }
+
+    .dark-mode .btn-refleksi-preview,
+    [data-theme="dark"] .btn-refleksi-preview {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border-color: #334155;
+    }
+
+    .dark-mode .btn-refleksi-preview:hover,
+    [data-theme="dark"] .btn-refleksi-preview:hover {
+      background-color: #334155;
+      color: #ffffff;
     }
 
     .btn-refleksi-open {
@@ -1102,13 +1131,16 @@
     .inline-preview-body {
       position: relative;
       width: 100%;
-      height: 85px;
-      background: #f1f5f9;
+      height: 175px;
+      background: #202124;
+      border-top: 1px solid #bfdbfe;
       transition: var(--transition-smooth);
     }
 
+    .dark-mode .inline-preview-body,
     [data-theme="dark"] .inline-preview-body {
       background: #020617;
+      border-top-color: #1e3a8a;
     }
 
     .inline-preview-body iframe {
@@ -1126,6 +1158,7 @@
       box-shadow: 0 3px 10px rgba(37, 99, 235, 0.08);
     }
 
+    .dark-mode .doc-item-card.is-featured,
     [data-theme="dark"] .doc-item-card.is-featured {
       background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 64, 175, 0.15) 100%);
       border-color: rgba(96, 165, 250, 0.4);
@@ -1143,11 +1176,6 @@
       border-radius: 4px;
       display: inline-block;
       margin-bottom: 4px;
-    }
-
-    [data-theme="dark"] .refleksi-lk-tag {
-      background-color: rgba(30, 58, 138, 0.5);
-      color: #93c5fd;
     }
 
     @media (max-width: 768px) {
@@ -1222,12 +1250,14 @@
       box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
     }
 
+    .dark-mode .narasi-doc-download-btn,
     [data-theme="dark"] .narasi-doc-download-btn {
       color: #93c5fd;
       background-color: rgba(30, 58, 138, 0.35);
       border-color: rgba(59, 130, 246, 0.4);
     }
 
+    .dark-mode .narasi-doc-download-btn:hover,
     [data-theme="dark"] .narasi-doc-download-btn:hover {
       background-color: #2563eb;
       color: #ffffff;
@@ -2948,14 +2978,18 @@
     if (localStorage.getItem('theme-spa') === 'dark' || 
         (!localStorage.getItem('theme-spa') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.body.classList.add('dark-mode');
+      document.documentElement.setAttribute('data-theme', 'dark');
       if (themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
       lucide.createIcons();
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
     }
 
     if (themeBtn) {
       themeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
         if (isDark) {
           localStorage.setItem('theme-spa', 'dark');
           if (themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
