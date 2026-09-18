@@ -850,54 +850,79 @@
       flex-wrap: wrap;
     }
 
+    /* Refleksi LK 2 Pill Button in Header */
     .btn-refleksi-lk {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      font-size: 0.8rem;
-      font-weight: 600;
+      gap: 8px;
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 700;
       font-family: var(--font-sans);
-      color: #1e3a8a;
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
-      border: 1px solid #93c5fd;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 50px;
       text-decoration: none;
       cursor: pointer;
       transition: var(--transition-smooth);
-      box-shadow: 0 2px 5px rgba(30, 58, 138, 0.08);
+      box-shadow: 0 3px 12px rgba(37, 99, 235, 0.35);
+      position: relative;
     }
 
     .btn-refleksi-lk:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
       color: #ffffff;
-      border-color: #1d4ed8;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
     }
 
     [data-theme="dark"] .btn-refleksi-lk {
-      color: #bfdbfe;
-      background: linear-gradient(135deg, rgba(30, 58, 138, 0.5) 0%, rgba(30, 64, 175, 0.3) 100%);
-      border-color: rgba(96, 165, 250, 0.4);
-    }
-
-    [data-theme="dark"] .btn-refleksi-lk:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
       color: #ffffff;
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      border-color: rgba(147, 197, 253, 0.4);
+      box-shadow: 0 3px 14px rgba(37, 99, 235, 0.5);
     }
 
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      animation: pulse-red 2s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+      }
+    }
+
+    /* Refleksi LK 2 Banner (Sub-tab Refleksi 4C) */
     .refleksi-lk-banner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 14px 20px;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
-      border: 1px solid #dbeafe;
+      padding: 16px 22px;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 50%, #eff6ff 100%);
+      border: 1.5px solid #bfdbfe;
+      border-left: 5px solid #2563eb;
       border-radius: var(--radius-sm);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+      position: relative;
     }
 
     .refleksi-lk-banner-left {
@@ -907,40 +932,62 @@
     }
 
     .refleksi-lk-banner-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: #dbeafe;
-      color: #1d4ed8;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #2563eb;
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
+    }
+
+    .refleksi-lk-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
     }
 
     .refleksi-lk-tag {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      color: #1d4ed8;
+      letter-spacing: 0.05em;
+      color: #1e40af;
       text-transform: uppercase;
       background-color: #dbeafe;
-      padding: 2px 8px;
-      border-radius: 12px;
-      display: inline-block;
-      margin-bottom: 4px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .refleksi-live-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #047857;
+      background-color: #d1fae5;
+      padding: 3px 9px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .refleksi-lk-banner h5 {
-      font-size: 0.92rem;
+      font-size: 0.96rem;
       font-family: var(--font-sans);
       font-weight: 700;
       color: var(--text-main);
-      margin: 0 0 2px;
+      margin: 0 0 3px;
     }
 
     .refleksi-lk-banner p {
-      font-size: 0.78rem;
+      font-size: 0.79rem;
       color: var(--text-muted);
       margin: 0;
     }
@@ -948,15 +995,37 @@
     .refleksi-lk-banner-right {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    .btn-refleksi-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1.5px solid #2563eb;
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-refleksi-toggle:hover {
+      background-color: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
     }
 
     .btn-refleksi-preview {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 14px;
+      padding: 8px 14px;
       font-size: 0.78rem;
       font-weight: 600;
       border-radius: 20px;
@@ -977,30 +1046,177 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 14px;
+      padding: 8px 14px;
       font-size: 0.78rem;
       font-weight: 600;
       border-radius: 20px;
-      border: 1px solid #93c5fd;
-      background-color: #2563eb;
+      border: 1px solid #1d4ed8;
+      background-color: #1d4ed8;
       color: #ffffff;
       text-decoration: none;
       transition: var(--transition-smooth);
     }
 
     .btn-refleksi-open:hover {
-      background-color: #1d4ed8;
-      box-shadow: 0 3px 8px rgba(29, 78, 216, 0.3);
+      background-color: #1e40af;
+      box-shadow: 0 3px 8px rgba(29, 78, 216, 0.35);
     }
 
     [data-theme="dark"] .refleksi-lk-banner {
-      background: linear-gradient(135deg, #1e293b 0%, #0f1e36 100%);
-      border-color: #334155;
+      background: linear-gradient(135deg, #0f1e36 0%, #1e293b 100%);
+      border-color: #1e40af;
+      border-left: 5px solid #60a5fa;
     }
 
-    [data-theme="dark"] .refleksi-lk-banner-icon {
-      background: rgba(30, 58, 138, 0.4);
+    [data-theme="dark"] .refleksi-lk-tag {
+      background-color: rgba(37, 99, 235, 0.25);
       color: #93c5fd;
+    }
+
+    [data-theme="dark"] .refleksi-live-badge {
+      background-color: rgba(6, 95, 70, 0.3);
+      color: #6ee7b7;
+    }
+
+    [data-theme="dark"] .btn-refleksi-toggle {
+      background-color: rgba(37, 99, 235, 0.2);
+      border-color: #60a5fa;
+      color: #bfdbfe;
+    }
+
+    [data-theme="dark"] .btn-refleksi-toggle:hover {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+
+    /* Inline Document Preview Card */
+    .inline-preview-card {
+      background: var(--bg-card);
+      border: 1.5px solid #bfdbfe;
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+      transition: var(--transition-smooth);
+    }
+
+    .inline-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, #f8fafc 0%, #eff6ff 100%);
+      border-bottom: 1px solid var(--border-color);
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    [data-theme="dark"] .inline-preview-card {
+      border-color: #1e3a8a;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="dark"] .inline-preview-header {
+      background: linear-gradient(90deg, #1e293b 0%, #0f1e36 100%);
+    }
+
+    .inline-preview-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .inline-preview-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .inline-preview-subtitle {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .inline-preview-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-inline-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-main);
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-inline-action:hover {
+      background: var(--accent-blue-light);
+      color: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+
+    .inline-preview-body {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #f1f5f9;
+    }
+
+    [data-theme="dark"] .inline-preview-body {
+      background: #0f172a;
+    }
+
+    .inline-preview-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Featured card in Analisis Artefak Docs list */
+    .doc-item-card.is-featured {
+      background: linear-gradient(135deg, #f0f7ff 0%, #eff6ff 100%);
+      border: 1.5px solid #93c5fd;
+      border-left: 4px solid #2563eb;
+      box-shadow: 0 3px 10px rgba(37, 99, 235, 0.08);
+    }
+
+    [data-theme="dark"] .doc-item-card.is-featured {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 64, 175, 0.15) 100%);
+      border-color: rgba(96, 165, 250, 0.4);
+      border-left: 4px solid #3b82f6;
+    }
+
+    .doc-featured-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: #ffffff;
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 4px;
     }
 
     [data-theme="dark"] .refleksi-lk-tag {
@@ -2213,8 +2429,9 @@
           <!-- Header Actions & Segmented Control -->
           <div class="dashboard-header-right">
             <button class="btn-refleksi-lk" id="header-refleksi-lk-btn" title="Lihat Dokumen Autentik Refleksi LK 2 (PDF)">
+              <span class="pulse-dot"></span>
               <i data-lucide="file-check-2" style="width: 15px; height: 15px;"></i>
-              <span>Refleksi LK (PDF)</span>
+              <span>Refleksi LK 2 (PDF)</span>
             </button>
             <div class="segmented-control">
               <button class="segment-btn active-segment" onclick="switchSubTab('refleksi-4c')">Refleksi 4C</button>
@@ -2232,16 +2449,47 @@
           <!-- Banner Dokumen LK 2 -->
           <div class="refleksi-lk-banner" id="refleksi-lk-banner">
             <div class="refleksi-lk-banner-left">
-              <div class="refleksi-lk-banner-icon"><i data-lucide="file-text" style="width: 20px; height: 20px;"></i></div>
+              <div class="refleksi-lk-banner-icon"><i data-lucide="file-check-2" style="width: 22px; height: 22px;"></i></div>
               <div>
-                <span class="refleksi-lk-tag">Dokumen Autentik LK 2</span>
+                <div class="refleksi-lk-badges">
+                  <span class="refleksi-lk-tag">✨ Dokumen Autentik LK 2</span>
+                  <span class="refleksi-live-badge"><span class="pulse-dot" style="width: 6px; height: 6px;"></span> PDF Google Drive</span>
+                </div>
                 <h5 id="banner-lk-title">Lembar Kerja Refleksi Pengalaman Belajar (PDF)</h5>
-                <p>Naskah autentik Lembar Kerja 2 tersimpan di Google Drive dan dapat ditinjau langsung.</p>
+                <p>Naskah autentik Lembar Kerja 2 tersimpan di Google Drive dan dapat ditinjau langsung di bawah atau layar penuh.</p>
               </div>
             </div>
             <div class="refleksi-lk-banner-right">
-              <button class="btn-refleksi-preview" id="btn-banner-preview"><i data-lucide="eye" style="width: 14px; height: 14px;"></i> Pratinjau LK 2</button>
-              <a href="#" target="_blank" class="btn-refleksi-open" id="btn-banner-open"><i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Buka Drive</a>
+              <button class="btn-refleksi-toggle" id="btn-banner-toggle-inline" onclick="toggleInlinePreview()">
+                <i data-lucide="layout" style="width: 14px; height: 14px;"></i> <span id="toggle-inline-text">Sembunyikan Pratinjau</span>
+              </button>
+              <button class="btn-refleksi-preview" id="btn-banner-preview">
+                <i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i> Layar Penuh
+              </button>
+              <a href="#" target="_blank" class="btn-refleksi-open" id="btn-banner-open">
+                <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Buka Drive
+              </a>
+            </div>
+          </div>
+
+          <!-- Inline Document Preview Card -->
+          <div class="inline-preview-card" id="inline-preview-card">
+            <div class="inline-preview-header">
+              <div class="inline-preview-header-left">
+                <span class="inline-preview-badge">Pratinjau Langsung</span>
+                <span class="inline-preview-subtitle" id="inline-preview-filename">Memuat naskah autentik Google Drive...</span>
+              </div>
+              <div class="inline-preview-header-actions">
+                <button class="btn-inline-action" id="btn-inline-fullscreen" title="Perbesar Layar Penuh">
+                  <i data-lucide="maximize-2" style="width: 13px; height: 13px;"></i> Layar Penuh
+                </button>
+                <a href="#" target="_blank" class="btn-inline-action" id="btn-inline-external" title="Buka di Tab Baru Google Drive">
+                  <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> Buka di Drive
+                </a>
+              </div>
+            </div>
+            <div class="inline-preview-body">
+              <iframe id="inline-preview-iframe" src="" frameborder="0" allow="autoplay" title="Pratinjau Dokumen LK 2"></iframe>
             </div>
           </div>
 
@@ -2849,6 +3097,24 @@
     }
 
     // ==========================================
+    // TOGGLE INLINE PDF PREVIEW
+    // ==========================================
+    function toggleInlinePreview() {
+      const card = document.getElementById('inline-preview-card');
+      const text = document.getElementById('toggle-inline-text');
+      if (!card) return;
+
+      if (card.style.display === 'none') {
+        card.style.display = 'block';
+        if (text) text.textContent = 'Sembunyikan Pratinjau';
+      } else {
+        card.style.display = 'none';
+        if (text) text.textContent = 'Tampilkan Pratinjau';
+      }
+      lucide.createIcons();
+    }
+
+    // ==========================================
     // RENDER DETAILS TO DASHBOARD DYNAMICALLY
     // ==========================================
     function renderCourseDetails() {
@@ -2886,6 +3152,29 @@
       const btnBannerOpen = document.getElementById('btn-banner-open');
       if (btnBannerOpen) {
         btnBannerOpen.setAttribute('href', data.refleksiLk || '#');
+      }
+
+      // Inline Document Preview (Sub-tab Refleksi 4C)
+      const inlineCard = document.getElementById('inline-preview-card');
+      const inlineIframe = document.getElementById('inline-preview-iframe');
+      const inlineSubtitle = document.getElementById('inline-preview-filename');
+      const btnInlineExternal = document.getElementById('btn-inline-external');
+      const btnInlineFullscreen = document.getElementById('btn-inline-fullscreen');
+
+      const lkDriveId = extractDriveId(data.refleksiLk);
+      if (inlineSubtitle) {
+        inlineSubtitle.textContent = `LK 2 – Refleksi Pengalaman Belajar: ${data.title} (PDF)`;
+      }
+      if (btnInlineExternal) {
+        btnInlineExternal.setAttribute('href', data.refleksiLk || '#');
+      }
+      if (btnInlineFullscreen) {
+        btnInlineFullscreen.onclick = () => {
+          openModal(`LK 2 – Refleksi Pengalaman Belajar: ${data.title} (PDF)`, data.refleksiLk, 'Dokumen Autentik LK 2 (PDF Drive)');
+        };
+      }
+      if (inlineIframe && lkDriveId) {
+        inlineIframe.src = `https://drive.google.com/file/d/${lkDriveId}/preview`;
       }
       
       // 2. Render Refleksi 4C Sub-tab
@@ -2963,16 +3252,18 @@
       const docListContainer = document.getElementById('doc-list-container');
       if (docListContainer) {
         docListContainer.innerHTML = '';
-        data.analisis.docs.forEach(doc => {
+        data.analisis.docs.forEach((doc, idx) => {
+          const isFeatured = idx === 0 || doc.title.includes('LK 2');
           const docCard = document.createElement('div');
-          docCard.className = 'doc-item-card';
+          docCard.className = `doc-item-card ${isFeatured ? 'is-featured' : ''}`;
           docCard.onclick = () => openModal(doc.title, doc.link, doc.type);
           docCard.innerHTML = `
             <div class="doc-item-left">
-              <div class="doc-icon-wrapper">
-                <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+              <div class="doc-icon-wrapper" style="${isFeatured ? 'background: #2563eb; color: #ffffff;' : ''}">
+                <i data-lucide="${isFeatured ? 'file-check-2' : 'file-text'}" style="width: 18px; height: 18px;"></i>
               </div>
               <div class="doc-item-info">
+                ${isFeatured ? '<span class="doc-featured-badge">⭐ Dokumen Utama LK 2</span>' : ''}
                 <h5>${doc.title}</h5>
                 <span>${doc.type}</span>
               </div>
